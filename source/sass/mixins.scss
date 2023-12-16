@@ -19,7 +19,7 @@
 }
 
 @mixin active {
-  &.focus-visible:active {
+  &:active:not(.focus-visible):not(:disabled) {
     @content;
   }
 }
@@ -33,6 +33,14 @@
 
   &.focus-visible:focus {
     @content;
+  }
+}
+
+@mixin disabled {
+  &:disabled,
+  &.button-disabled {
+    @content;
+    pointer-events: none;
   }
 }
 
@@ -58,6 +66,12 @@
 
 @mixin vp-1023 {
   @media (max-width: ($vp-1024 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1199 {
+  @media (max-width: ($vp-1200 - 1px)) {
     @content;
   }
 }

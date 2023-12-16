@@ -1,0 +1,32 @@
+.video__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  background-color: $color-transparent;
+  border: 1px solid $color-default-white;
+  border-radius: 50%;
+  color: $color-default-white;
+  cursor: pointer;
+
+  @include hover-focus {
+    border-color: $color-resolution-blue;
+    outline: none;
+  }
+
+  @include active {
+    background-color: $color-resolution-blue;
+  }
+
+  @include disabled {
+    border-color: $color-navy-blue-opacity;
+    color: $color-navy-blue;
+  }
+}
+
+.video__button svg {
+  margin-top: 2px;
+  margin-left: 4px;
+}

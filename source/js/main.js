@@ -1,6 +1,8 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
+import {openMenu} from './modules/menu';
+import {initHeroSlider} from './modules/sliders/init-hero-slider';
 
 // ---------------------------------
 
@@ -21,6 +23,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    openMenu();
+    initHeroSlider();
   });
 });
 

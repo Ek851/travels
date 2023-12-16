@@ -1,0 +1,45 @@
+.hero__pagination.swiper-pagination {
+  right: 0;
+  bottom: 75px;
+  text-align: right;
+
+  @include vp-1199 {
+    bottom: 40px;
+    text-align: center;
+  }
+}
+
+.hero__pagination .swiper-pagination-bullet {
+  border: 1px solid $color-default-white;
+  opacity: 1;
+  background-color: $color-transparent;
+  width: 10px;
+  height: 10px;
+
+  @include hover {
+    background-color: $color-gainsboro;
+  }
+
+  @include focus {
+    outline: 1px solid $color-white-opacity;
+    outline-offset: 1px;
+  }
+
+  @include active {
+    background-color: $color-white-opacity;
+  }
+
+  @include vp-767 {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.hero__pagination.swiper-pagination .swiper-pagination-bullet {
+  margin: 0;
+  margin-left: 20px;
+}
+
+.hero__pagination .swiper-pagination-bullet-active {
+  background-color: $color-default-white;
+}
